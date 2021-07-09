@@ -16,7 +16,7 @@
     t.src = v;
     s = b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t, s)
-}(window, document, 'script', '//www.example.com/js/csevents.js');
+}(window, document, 'script', '//www.example.com/js/csevents.min.js');
 ```
 
 ## 引入JS库后立即执行：
