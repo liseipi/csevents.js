@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-blurred" lang="en"
+     dir="ltr" role="textbox" aria-label="Rich Text Editor, main" contenteditable="true"><h2><strong>参考文档</strong></h2>
+    <p>Facebook 像素的 fbq('track') 函数参考文档。</p>
+    <h2><strong>标准事件</strong></h2>
+    <p>您可以使用 fbq('track') 函数来追踪下列<a
+            href="https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking#standard-events">标准事件</a>。标准事件还支持具有特定对象属性的<a
+            href="https://developers.facebook.com/docs/facebook-pixel/reference/?locale=zh_CN#object-properties">参数</a>对象，这让您可以添加事件的详细信息。
+    </p>
+    <figure class="table ck-widget ck-widget_with-selection-handle" style="float:left;" contenteditable="false">
+        <table style=";">
+            <tbody>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-right:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>事件名称</strong></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>事件说明</strong></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>对象属性</strong></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-left:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>推广对象 custom_event_type 值</strong></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">AddPaymentInfo</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>在结账流程中添加支付信息时。</p>
+                    <p><i>访客点击“保存账单信息”按钮。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_category、content_ids、contents、currency、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">ADD_PAYMENT_INFO</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">AddToCart</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>将产品加入购物车时。</p>
+                    <p><i>访客点击“加入购物车”按钮。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_ids、content_name、content_type、contents、currency、value</p>
+                    <p><i>无需提供。</i></p>
+                    <p><i>对于动态广告，必须提供以下属性：content_type 和 contents，或 content_ids</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">ADD_TO_CART</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">AddToWishlist</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>将产品添加到心愿单时。</p>
+                    <p><i>访客点击“加入心愿单”按钮。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_name、content_category、content_ids、contents、currency、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">ADD_TO_WISHLIST</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">CompleteRegistration</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>填写完注册表单时。</p>
+                    <p><i>访客提交填写完的订阅或注册表单。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_name、currency、status、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">COMPLETE_REGISTRATION</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">Contact</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客通过电话、短信、邮件及聊天等方式与商家联系时。</p>
+                    <p><i>访客提交产品相关问题。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">CONTACT</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">CustomizeProduct</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客定制产品时。</p>
+                    <p><i>访客选择 T 恤的颜色。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">CUSTOMIZE_PRODUCT</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">Donate</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客向您的组织或事业捐款时。</p>
+                    <p><i>访客将“向人道协会捐款”加入购物车。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;"><br data-cke-filler="true"></span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">FindLocation</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客通过网站或应用搜索您商店的位置，并有意到访实际位置时。</p>
+                    <p><i>访客想在本地商店找到某件特定产品。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">FIND_LOCATION</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">InitiateCheckout</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客在完成结账流程前进入结账流程时。</p>
+                    <p><i>访客点击“结账”按钮。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_category、content_ids、contents、currency、num_items、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">INITIATE_CHECKOUT</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">Lead</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>完成注册时。</p>
+                    <p><i>访客点击“定价”。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_category、content_name、currency、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">LEAD</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">PageView</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>这是默认的像素追踪网页访问。</p>
+                    <p><i>访客登陆您的网站页面。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">PAGE_VIEW</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">Purchase</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>完成购买或结账流程时。</p>
+                    <p><i>访客已完成购买或结账流程，并登陆到“谢谢”或“确认”页面。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>
+                    content_ids、content_name、content_type、contents、currency、num_items、value</p>
+                    <p><i>必须提供：currency 和 value</i></p>
+                    <p><i>对于动态广告，必须提供以下属性：content_type 和 contents，或 content_ids</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">PURCHASE</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">Schedule</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客预约访问您的某一个分店。</p>
+                    <p><i>访客选择预约牙医的日期和时间。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">SCHEDULE</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">Search</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>进行搜索时。</p>
+                    <p><i>访客在您的网站上搜索产品。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>content_category、content_ids、contents、currency、search_string、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">SEARCH</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">StartTrial</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客开始免费试用您提供的产品或服务时。</p>
+                    <p><i>访客选择免费试玩您的游戏一个星期。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>currency、predicted_ltv、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">START_TRIAL</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">SubmitApplication</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客申请您提供的产品、服务或计划时。</p>
+                    <p><i>访客申请信用卡、教育计划或工作。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><i>无需提供。</i></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">SUBMIT_APPLICATION</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">Subscribe</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访客申请开始付费订阅您提供的产品或服务时。</p>
+                    <p><i>访客订阅您的直播服务。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>currency、predicted_ltv、value</p>
+                    <p><i>无需提供。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">SUBSCRIBE</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">ViewContent</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>访问您关心的网页（例如，产品页面或落地页）。ViewContent
+                    会告诉您是否有用户访问网页的网址，但不会告诉您用户在该页面看到的内容或进行的操作。</p>
+                    <p><i>访客登陆产品详情页面。</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><p>
+                    content_ids、content_category、content_name、content_type、contents、currency、value</p>
+                    <p><i>无需提供。</i></p>
+                    <p><i>对于动态广告，必须提供以下属性：content_type 和 contents，或 content_ids</i></p></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">VIEW_CONTENT</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </figure>
+    <h2><strong>对象属性</strong></h2>
+    <p>您可以使用任何自定义事件及任何支持这些属性的标准事件来添加下列预定义对象属性。请将您的参数对象数据处理成 JSON 格式。</p>
+    <figure class="table ck-widget ck-widget_with-selection-handle" style="float:left;" contenteditable="false">
+        <table style=";">
+            <tbody>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-right:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>属性键</strong></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>值类型</strong></span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-bottom:0.75pt solid #c9ced4;border-left:0.75pt solid #000000;padding:6pt 9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;"><strong>参数说明</strong></span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">content_category</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">字符串</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-top:0.75pt solid #c9ced4;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">页面/产品的类别。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">content_ids</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">整数或字符串数组</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">与事件相关联的产品编号，例如 SKU（如 ['ABC123', 'XYZ789']）。</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">content_name</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">字符串</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">页面/产品的名称。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">content_type</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">字符串</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">基于所传递的 content_ids 或 contents，可能为 product 或 product_group。如果在 content_ids 或 contents 参数中传递的编号是产品编号，则该值应为 product。如果所传递的是产品组编号，则该值应为 product_group。</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">contents</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">对象数组</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">JSON 对象数组，包含数量和国际商品编码 (EAN)（如适用）或其他产品或内容标识符。id 和 quantity 为必填字段，例如 [{'id': 'ABC123', 'quantity': 2}, {'id': 'XYZ789', 'quantity': 2}]。</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">currency</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">字符串</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">指定 value 的货币。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">num_items</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">整数</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">与 InitiateCheckout 事件结合使用。开始结账时的商品数量。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">predicted_ltv</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">整数、浮点数</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">所预测的订阅者终生价值，由广告主定义并表示为确切的值。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">search_string</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">字符串</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">与 Search 事件结合使用。用户搜索时输入的字符串。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">status</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">布尔值</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="background-color:#f5f6f7;border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span
+                        style="display:inline-block;">与 CompleteRegistration 事件结合使用，用于显示注册状态。</span></td>
+            </tr>
+            <tr>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">value</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;border-right:0.75pt solid #000000;padding:9pt;vertical-align:top;"
+                    contenteditable="true"><span style="display:inline-block;">整数或浮点数</span></td>
+                <td class="ck-editor__editable ck-editor__nested-editable"
+                    style="border-left:0.75pt solid #000000;padding:9pt;vertical-align:top;" contenteditable="true">
+                    <span style="display:inline-block;">向商家执行此事件的用户的值。</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </figure>
+</div>
+
+</body>
+</html>
