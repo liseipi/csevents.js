@@ -6,9 +6,6 @@
         f.execStart = a.performance && a.performance.now && a.performance.now();
         // console.log(f.version);
 
-        // f.action = '//w.cs.com/ContactUS/send';
-        // f.action = '//w.cs.com/fb/tr';
-        // f.action = 'http://conversion-api.deepin/fb/tr';
         f.action = 'https://'+document.domain+'/fb/tr';
         f.runMethod = function (arguments) {
             switch (arguments[0]) {
@@ -27,7 +24,6 @@
             f.trackId = arg;
         };
 
-
         var runTrack = function (arg) {
             var e = "cs" + Math.random().toString().replace(".", "");
             var form = b.createElement("form");
@@ -44,38 +40,44 @@
             form.appendChild(i);
 
             var ci = b.createElement("input");
-            ci.name = decodeURIComponent("trackId");
+            ci.name = decodeURIComponent("track_id");
             ci.value = f.trackId;
             form.appendChild(ci);
 
-            var ci = b.createElement("input");
-            ci.name = decodeURIComponent("trackEvent");
-            ci.value = arg[1];
-            form.appendChild(ci);
+            var en = b.createElement("input");
+            en.name = decodeURIComponent("event_name");
+            en.value = arg[1];
+            form.appendChild(en);
 
-            if (arg[1] == "PageView") {
-                var ci = b.createElement("input");
-                ci.name = decodeURIComponent("trackUrl");
-                ci.value = c.href;
-                form.appendChild(ci);
-            }
+            var ei = b.createElement("input");
+            ei.name = decodeURIComponent("event_id");
+            ei.value = "event.id." + e;
+            form.appendChild(ei);
+
+            // if (arg[1] == "PageView") {
+            //     var tu = b.createElement("input");
+            //     tu.name = decodeURIComponent("event_source_url");
+            //     tu.value = c.href;
+            //     form.appendChild(tu);
+            // }
+
+            var esu = b.createElement("input");
+            esu.name = decodeURIComponent("event_source_url");
+            esu.value = c.href;
+            form.appendChild(esu);
 
             if (arg.length > 2) {
                 var obj = arg[2];
                 for (let key in obj) {
-                    var ci = b.createElement("input");
-                    ci.name = decodeURIComponent(key);
-                    ci.value = obj[key];
-                    form.appendChild(ci);
+                    var ki = b.createElement("input");
+                    ki.name = decodeURIComponent(key);
+                    ki.value = obj[key];
+                    form.appendChild(ki);
                 }
             }
-
-            // form.parentNode && form.parentNode.removeChild(form);
             b.body != null && b.body.appendChild(form);
             form.submit();
-
             // form.parentNode && form.parentNode.removeChild(form);
-
         };
 
         f.callMethod = function () {
